@@ -1,0 +1,13 @@
+{
+  "name": "marohe-world",
+  "version": "5.65.0",
+  "private": true,
+  "scripts": {
+    "dev": "node server.cjs",
+    "start": "node server.cjs",
+    "test": "node --test lib/restaurants/restaurants.test.js lib/movies/movies.test.js"
+  },
+  "engines": {
+    "node": "24.x"
+  }
+}

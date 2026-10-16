@@ -1,0 +1,69 @@
+/* Store sections grouped into Kits, Food and Clothing. */
+.store-category-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:25px;margin:24px 0 50px}
+.store-category-card{display:block;position:relative;overflow:hidden;text-align:left;border:1px solid #ddd4e3;border-radius:12px;background:#fff;color:var(--ink);padding:0;box-shadow:0 2px 0 #e9e0eb;transition:transform .18s ease,box-shadow .18s ease}
+.store-category-card:hover,.store-category-card:focus-visible{transform:translateY(-3px);box-shadow:0 7px 0 #e2d5e8}
+.store-category-card img{display:block;width:100%;height:280px;object-fit:cover;background:#e8dff0}
+.store-category-card-copy{display:grid;gap:7px;min-height:88px;padding:18px 20px}
+.store-category-card-copy strong{font:600 23px/1.1 'Space Grotesk',sans-serif;letter-spacing:-.4px}
+.store-category-card-copy small{font:14px/1.4 'DM Sans',sans-serif;color:#68606d}
+.store-back{margin:6px 0 14px;background:#fff;border:1px solid #c9bed0;border-radius:999px;padding:11px 17px;color:var(--ink);font-size:13px;font-weight:600}
+.store-back:hover{background:#f5e7f5}
+.store-category{scroll-margin-top:24px;margin:12px 0 64px}
+.store-category-heading{margin-bottom:18px}
+.store-category-heading h2{margin:6px 0;font:600 clamp(30px,4vw,48px)/1.05 'Space Grotesk',sans-serif;letter-spacing:-1.5px}
+.store-category-heading p{max-width:560px}
+.store-category-cover{position:relative;margin:18px 0 24px;border:1px solid #ddd4e3;border-radius:14px;overflow:hidden;background:#25182f;isolation:isolate}
+.store-category-cover:after{content:'';position:absolute;inset:45% 0 0;background:linear-gradient(transparent,#17131ed9);z-index:0;pointer-events:none}
+.store-category-cover img{display:block;width:100%;aspect-ratio:2/1;max-height:520px;object-fit:cover;object-position:center 52%}
+.store-category-cover figcaption{position:absolute;z-index:1;bottom:0;left:0;display:grid;gap:4px;padding:20px 24px;color:#fff}
+.store-category-cover figcaption strong{font:700 12px/1.4 monospace;letter-spacing:.18em}
+.store-category-cover figcaption span{font:600 clamp(18px,2.4vw,27px)/1.25 'Space Grotesk',sans-serif}
+.store-subheading{margin:34px 0 14px;font:700 13px/1.4 'DM Sans',sans-serif;letter-spacing:.16em;color:#7651a4}
+.store-category .products{margin:0}
+.store-category .store-community-banner{margin:34px 0 0}
+@media(max-width:900px){.store-category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.store-category-grid{grid-template-columns:1fr;gap:20px;margin:20px 0 38px}.store-category-card img{height:300px}.store-category-card-copy{min-height:78px;padding:16px}.store-category{margin:18px 0 46px}.store-category-cover{border-radius:10px}.store-category-cover img{aspect-ratio:4/3;max-height:none}.store-category-cover figcaption{padding:13px 15px}.store-category-cover:after{inset:30% 0 0}.store-subheading{margin:25px 0 10px}}
+
+/* Bring the whole shop into the same cinematic dark palette as Home. */
+body[data-page=tienda]{background:#111015;color:#f7f2fc}
+body[data-page=tienda] header{background:#111015;border-color:#ffffff1c}
+body[data-page=tienda] nav a{color:#e9e0ef}
+body[data-page=tienda] nav a.active:after{background:#f3a4cf}
+body[data-page=tienda] .header-note{color:#b8aabc}
+body[data-page=tienda] footer{border-color:#ffffff1c;color:#a79bab}
+body[data-page=tienda] .page-top p{color:#c4b7ce}
+body[data-page=tienda] .page-top .eyebrow{color:#c9a9dc}
+body[data-page=tienda] .page-top h1 em{color:#f3a4cf}
+body[data-page=tienda] .page-top>.dark{background:#f3a4cf;color:#201928}
+body[data-page=tienda] .bunny-shop-note{background:linear-gradient(112deg,#30213d,#251a30 58%,#17342f);border:1px solid #ffffff24;color:#faf4ff}
+body[data-page=tienda] .bunny-shop-note>img{border-color:#f3a4cf;background:#21172e}
+body[data-page=tienda] .bunny-shop-note .eyebrow{color:#e9b5dc}
+body[data-page=tienda] .bunny-shop-note h2{color:#fff}
+body[data-page=tienda] .bunny-shop-note p{color:#cdbed6}
+body[data-page=tienda] .store-note{color:#a99ab4}
+body[data-page=tienda] .store-category-card{background:#211b29;border-color:#ffffff24;color:#f7f2fc;box-shadow:0 3px 0 #35243f}
+body[data-page=tienda] .store-category-card:after{content:'';position:absolute;inset:42% 0 0;background:linear-gradient(transparent,#111015eb);pointer-events:none}
+body[data-page=tienda] .store-category-card img{filter:saturate(.9)}
+body[data-page=tienda] .store-category-card-copy{position:relative;z-index:1;margin-top:-58px;padding-top:68px;min-height:112px;background:linear-gradient(0deg,#211b29 0%,#211b29 74%,transparent 100%)}
+body[data-page=tienda] .store-category-card-copy strong{font-size:26px;letter-spacing:.04em}
+body[data-page=tienda] .store-category-card-copy small{color:#c4b5cf}
+body[data-page=tienda] .store-category-card:hover,body[data-page=tienda] .store-category-card:focus-visible{border-color:#e79bd0;box-shadow:0 8px 0 #4d2854}
+body[data-page=tienda] .store-back{background:#2b2035;border-color:#ffffff33;color:#f6ecfa}
+body[data-page=tienda] .store-back:hover{background:#4a3154}
+body[data-page=tienda] .store-category-heading h2{color:#fff}
+body[data-page=tienda] .store-category-heading p{color:#b9a9c5}
+body[data-page=tienda] .store-category-heading .eyebrow{color:#e7a6d2}
+body[data-page=tienda] .store-subheading{color:#e9a4d6}
+body[data-page=tienda] .product{background:#211b29;border-color:#ffffff24;color:#f7f2fc;box-shadow:0 3px 0 #35243f}
+body[data-page=tienda] .product p{color:#bdafc8}
+body[data-page=tienda] .product-bottom strong{color:#f4d6a1}
+body[data-page=tienda] .product-bottom button{background:#f3a4cf;color:#241727}
+body[data-page=tienda] .product-bottom .instagram-buy{background:#f3a4cf;color:#241727}
+body[data-page=tienda] .product-bottom .coming-soon{background:#41314f;color:#eadcf1}
+body[data-page=tienda] .store-community-banner{border-color:#ffffff24;box-shadow:0 4px 0 #35243f}
+footer .footer-agency{color:#f3a4cf;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+footer .footer-agency:hover{color:#fff}
+@media(max-width:700px){body[data-page=tienda] main{padding-top:25px}body[data-page=tienda] .bunny-shop-note{border-radius:12px}}
+
+.nav-soon{display:inline-block;margin-left:4px;color:#98798f;font-size:9px;font-weight:600}.club-coming{margin:0 auto 22px;max-width:1440px;padding:14px 20px;border:1px solid #63536d;border-radius:16px;color:#ffd0e5;background:#281d30;display:flex;align-items:center;gap:12px}.club-coming>span{font-size:24px}.club-coming p{margin-left:auto;color:#e1d4e5}@media(max-width:760px){.club-coming{align-items:flex-start;flex-wrap:wrap}.club-coming p{width:100%;margin:0}}
+.nav-soon{display:inline-block;margin-left:4px;color:#98798f;font-size:9px;font-weight:600}.club-coming{margin:0 auto 22px;max-width:1440px;padding:14px 20px;border:1px solid #63536d;border-radius:16px;color:#ffd0e5;background:#281d30;display:flex;align-items:center;gap:12px}.club-coming>span{font-size:24px}.club-coming p{margin-left:auto;color:#e1d4e5}@media(max-width:760px){.club-coming{align-items:flex-start;flex-wrap:wrap}.club-coming p{width:100%;margin:0}}
